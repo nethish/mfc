@@ -23,3 +23,7 @@ poetry shell
 
 ## APIs
 * /api/v1/parse_cas_summary
+* /api/v1/company/4871
+* /api/v1/fund_holding/15413
+* /api/v1/fund_scheme/15413
+* /api/v1/fund_house/4

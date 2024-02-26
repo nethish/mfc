@@ -139,8 +139,6 @@ def parse_summary(file: UploadFile = File(...), password: Annotated[str, Form()]
     return extract_cas(data)
 
 
-
-
 init_services()
 
 app.include_router(router)

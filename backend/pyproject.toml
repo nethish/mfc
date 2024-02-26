@@ -11,6 +11,8 @@ fastapi = "^0.109.1"
 uvicorn = {extras = ["standard"], version = "^0.27.0.post1"}
 tabula-py = "^2.9.0"
 sqlalchemy = "^2.0.25"
+python-multipart = "^0.0.9"
+requests = "^2.31.0"
 
 
 [build-system]

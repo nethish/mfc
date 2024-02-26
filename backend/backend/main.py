@@ -1,5 +1,4 @@
-from typing import Union
-from fastapi import FastAPI, APIRouter
+from fastapi import FastAPI, APIRouter, UploadFile, File
 import logging
 
 from cas_parser import parse
@@ -70,19 +69,15 @@ def company(company_id: int):
 
 
 @router.post('/parse_cas_summary')
-def parse_summary():
-    ## TODO: Port to FastAPI
-    # The below code is written for Flask. This has to be ported to FastAPI
-    # file = request.files['file']
-    # password = request.form['password']
-    # print(password)
-    # try:
-    #     data = parse(file, password)
-    # except:
-    #     return jsonify({}), 429
-    # return jsonify(data), 200
-    return {}
-
+def parse_summary(file: UploadFile = File(...), password: str = ''):
+    logging.info(file.filename)
+    logging.info(password)
+    data = {}
+    try:
+        data = parse(file.file, '')
+    except Exception as e:
+        logging.info("An exception occurred", e)
+    return data
 
 
 app.include_router(router)

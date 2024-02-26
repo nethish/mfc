@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "9907ffcd-463b-4d23-9a42-9ee0bfb398bb",
+		"name": "mfc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25803388"
+	},
+	"item": [
+		{
+			"name": "fund_holding",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{SERVER}}/api/v1/fund_holding/15290",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"fund_holding",
+						"15290"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "company",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{SERVER}}/api/v1/company/4871",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"company",
+						"4871"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fund_house",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{SERVER}}/api/v1/fund_house/4",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"fund_house",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "parse_cas_summary",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/nethish/repos/startup/mfc/backend/tests/nopass.pdf"
+						},
+						{
+							"key": "password",
+							"value": "pass",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{server}}/api/v1/parse_cas_summary/",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"parse_cas_summary",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "server",
+			"value": "localhost:8000",
+			"type": "string"
+		}
+	]
+}
